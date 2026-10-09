@@ -1,18 +1,16 @@
 package com.helpDesk.helpDesk.entity;
 
 import com.helpDesk.helpDesk.enums.TicketStatus;
-import jakarta.annotation.Priority;
+import com.helpDesk.helpDesk.enums.Priority;
 import jakarta.persistence.*;
-import jdk.jfr.Category;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "/tickets")
+@Table(name = "tickets")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -75,7 +73,7 @@ public class Ticket {
     }
 
 
-    @PrePersist
+    @PreUpdate
     public void preUpdate() {
         updated_at = LocalDateTime.now();
     }

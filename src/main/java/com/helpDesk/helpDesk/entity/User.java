@@ -1,11 +1,11 @@
 package com.helpDesk.helpDesk.entity;
 
+import com.helpDesk.helpDesk.enums.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.management.relation.Role;
 import java.time.LocalDateTime;
 
 @Entity
